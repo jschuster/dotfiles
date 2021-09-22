@@ -6,6 +6,8 @@ It relys on [oh my zsh](https://ohmyz.sh)
 
 I also use [iTerm2](https://iterm2.com) for the full 'oh my zsh'-experience :)
 
+In my [iterm2setup](https://github.com/jschuster/iterm2setup) repo you will find a tutorial on how to set up iTerm2.
+
 ## Install
 For my future me and you I wrote a Makefile installer.
 
