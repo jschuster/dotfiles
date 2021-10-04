@@ -2,7 +2,7 @@
 
 Feel free to get inspired by it or use the [installer](#install) to take over the whole thing.
 
-It relys on [oh my zsh](https://ohmyz.sh)
+It relies on [oh my zsh](https://ohmyz.sh)
 
 I also use [iTerm2](https://iterm2.com) for the full 'oh my zsh'-experience :)
 
