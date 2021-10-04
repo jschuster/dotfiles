@@ -9,14 +9,13 @@ export HISTFILE=$HOME/.zsh_history
 setopt HIST_IGNORE_SPACE
 
 # Path to JAVA
-#export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/Contents/Home/
 export JAVA_HOME=$(/usr/libexec/java_home -v1.8)
 
 # Path to Android Tools like adb and emulator
-export ANDROID_HOME=/Users/$USER/Library/Android/sdk
-export PATH=${PATH}:$ANDROID_HOME/emulator
-export PATH=${PATH}:$ANDROID_HOME/tools
-export PATH=${PATH}:$ANDROID_HOME/platform-tools
+export ANDROID_SDK_ROOT=/Users/$USER/Library/Android/sdk
+export PATH=${PATH}:$ANDROID_SDK_ROOT/emulator
+export PATH=${PATH}:$ANDROID_SDK_ROOT/tools
+export PATH=${PATH}:$ANDROID_SDK_ROOT/platform-tools
 
 #export JAVA_OPTS="$JAVA_OPTS -Dstudio.emu.params=-writable-system"
 export QEMU_AUDIO_DRV=none
