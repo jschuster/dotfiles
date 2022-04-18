@@ -128,18 +128,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias typora="open -a typora"
-alias say="say -v Alex"
-alias say-de="say -v Anna"
-alias ls="ls -l"
-
-jdk() {
-      version=$1
-      unset JAVA_HOME;
-      export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
-      java -version
-}
-
+source $ZSH_CONFIG/aliases.sh
+source $ZSH_CONFIG/functions.sh
 source $ZSH_CONFIG/adb_functions.sh
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
