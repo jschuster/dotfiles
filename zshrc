@@ -4,6 +4,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Path to the repository folder containing this zshrc file if used via symbolic link
+export ZSH_CONFIG=$(dirname $(readlink ~/.zshrc))
+
 # Use same HISTFILE in all terminals - incl. Android Studio
 export HISTFILE=$HOME/.zsh_history
 setopt HIST_IGNORE_SPACE
@@ -12,7 +15,7 @@ setopt HIST_IGNORE_SPACE
 export JAVA_HOME=$(/usr/libexec/java_home -v1.8)
 
 # Path to Android Tools like adb and emulator
-export ANDROID_SDK_ROOT=/Users/$USER/Library/Android/sdk
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=${PATH}:$ANDROID_SDK_ROOT/emulator
 export PATH=${PATH}:$ANDROID_SDK_ROOT/tools
 export PATH=${PATH}:$ANDROID_SDK_ROOT/platform-tools
@@ -136,6 +139,8 @@ jdk() {
       export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
       java -version
 }
+
+source $ZSH_CONFIG/adb_functions.sh
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
