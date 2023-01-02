@@ -6,7 +6,7 @@
 # Select a device to be used in all subsequent adb executions.
 adbdevice() {
     # shellcheck disable=SC2139,SC2086
-    alias adb="adb $($ZSH_CONFIG/adb_select_device.sh)"
+    alias adb="adb $($ZSH_CUSTOM/adb_select_device.sh)"
 }
 
 # Attention!
@@ -24,6 +24,6 @@ adbsetproxy() {
 }
 
 # Unset proxy
-adbunsetproxy() { eval adb shell settings put global http_proxy null; }
+adbunsetproxy() { eval adb shell settings put global http_proxy :0; }
 
 currentip() { ipconfig getifaddr "$(route get example.com | grep interface | awk '{print $2}')"; }

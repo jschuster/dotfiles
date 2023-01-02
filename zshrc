@@ -4,15 +4,15 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Path to the repository folder containing this zshrc file if used via symbolic link
-export ZSH_CONFIG=$(dirname $(readlink ~/.zshrc))
+# Path to custom scripts
+export ZSH_CUSTOM=$(dirname $(readlink ~/.zshrc))
 
 # Use same HISTFILE in all terminals - incl. Android Studio
 export HISTFILE=$HOME/.zsh_history
 setopt HIST_IGNORE_SPACE
 
 # Path to JAVA
-export JAVA_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_HOME=$(/usr/libexec/java_home -v11)
 
 # Path to Android Tools like adb and emulator
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
@@ -98,7 +98,11 @@ DEFAULT_USER="$USER"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow-avh)
+plugins=(
+    adb
+    git 
+    git-flow-avh
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -128,9 +132,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source $ZSH_CONFIG/aliases.sh
-source $ZSH_CONFIG/functions.sh
-source $ZSH_CONFIG/adb_functions.sh
 
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
