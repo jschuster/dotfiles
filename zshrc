@@ -132,5 +132,5 @@ source $ZSH_CONFIG/aliases.sh
 source $ZSH_CONFIG/functions.sh
 source $ZSH_CONFIG/adb_functions.sh
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
