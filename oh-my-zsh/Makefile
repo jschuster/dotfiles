@@ -18,8 +18,8 @@ else
 endif
 
 install-ohmyzsh-plugins: install-homebrew
-	@test ! -f $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh || BREW install zsh-autosuggestions
-	@test ! -f $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh || BREW install zsh-syntax-highlighting
+	@test -f $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh || BREW install zsh-autosuggestions
+	@test -f $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh || BREW install zsh-syntax-highlighting
 
 
 backup-existing-zshrc:
