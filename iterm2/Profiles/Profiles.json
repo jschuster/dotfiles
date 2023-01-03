@@ -1,0 +1,32 @@
+{
+    "Profiles": [
+        {
+            "Name" : "ADB",
+            "Guid" : "3D7C85DF-675C-4C9C-A426-2F059B06891D",
+            "Dynamic Profile Parent Name": "Default Shared",
+            "Shortcut" : "1",
+            "Initial Text" : "fc -p $HOME\/.zsh_history_adb",
+            "Background Color" : {
+                "Red Component" : 0.23911046981811523,
+                "Color Space" : "sRGB",
+                "Blue Component" : 0.20169109106063843,
+                "Alpha Component" : 1,
+                "Green Component" : 0.15712705254554749
+              }
+        },
+        {
+            "Name" : "Docker",
+            "Guid" : "238C3FCB-EE2E-43AC-9645-2AFE13EE6151",
+            "Dynamic Profile Parent Name": "Default Shared",
+            "Shortcut" : "2",
+            "Initial Text" : "fc -p $HOME\/.zsh_history_docker",
+            "Background Color" : {
+                "Red Component" : 0.13344526290893555,
+                "Color Space" : "sRGB",
+                "Blue Component" : 0.15512596070766449,
+                "Alpha Component" : 1,
+                "Green Component" : 0.18473862111568451
+              }
+        }
+    ]
+}
