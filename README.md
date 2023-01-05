@@ -16,9 +16,9 @@ In my [iterm2setup](https://github.com/jschuster/iterm2setup) repo you will find
 For detailed instructions see the individual README files in the corresponding folders.
 
 ## Resources
-[Sebastien Varrette aka Falkor's dotfiles](https://github.com/Falkor/dotfiles)
-[Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles)
-[Cameron Little's dotfiles](https://github.com/apexskier/dotfiles)
+* [Sebastien Varrette aka Falkor's dotfiles](https://github.com/Falkor/dotfiles)
+* [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles)
+* [Cameron Little's dotfiles](https://github.com/apexskier/dotfiles)
 
 
 ## License
