@@ -170,6 +170,35 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 ###############################################################################
+# Safari & WebKit                                                             #
+###############################################################################
+
+# Safari version 16 and newer uses containered preferences instead of the former com.apple.Safari
+# A lot of former Keys still can be set but have no effect even in the new containered preferences
+
+# Safari should opt-out of the global set AppleWindowTabbingMode 'always'. See in General UI/UX
+defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari AppleWindowTabbingMode -string "manual"
+
+# Show the full URL in the address bar (note: this still hides the scheme)
+defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari ShowFullURLInSmartSearchField -bool true
+
+# Make Safari’s search banners default to Contains instead of Starts With
+defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
+
+# Prevent Safari from opening ‘safe’ files automatically after downloading
+defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari AutoOpenSafeDownloads -bool false
+
+# Does not work anymore starting Safari 16, even with new keys
+# Show Safari’s bookmarks bar by default
+# defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari ShowFavoritesBar-v2 -bool true
+
+# Enable the Develop menu and the Web Inspector in Safari
+#defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari IncludeDevelopMenu -bool true
+#defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+#defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
