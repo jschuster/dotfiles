@@ -1,9 +1,9 @@
-# My oh-my-zsh managed .zshrc setup
+# Joachim Schuster's oh-my-zsh managed .zshrc setup
 
 With the [installer](#install) you can integrate the setup on your own Mac. 
 Perhaps it's best to fork the repo and use it as the basis for your personal zshrc setup ;)
 
-Its basically created by the install wizzard of [oh my zsh](https://ohmyz.sh) and extended by a some more settings.
+It's basically created by the install wizzard of [oh my zsh](https://ohmyz.sh) and extended by some more settings.
 
 I also use [iTerm2](https://iterm2.com) for the full 'oh my zsh'-experience :)
 
@@ -24,4 +24,4 @@ What it does:
 5. create a link .zshrc to the zshrc
 
 ## License
-See the [LICENSE](LICENSE) file for license rights and limitations (MIT).
+See the [LICENSE](../LICENSE) file for license rights and limitations (MIT).

@@ -1,10 +1,12 @@
 # Joachim Schuster's macOS defaults
 
-I provide here my own macOS defaults. 
-This makes it possible to perform all basic settings in one go, e.g. when reinstalling the system.
-Feel free to use them at your own risk. 
+`setdefaults.sh` contains the set of macOS default settings that I currently use.
 
-They are highly inspired from the following pages
+Running that script applys the basic setup in one go, e.g. when reinstalling the system.
+
+You are welcome to use the whole script or some of its ideas. Use them at your own risk.
+
+Also check these sites, for more inspiring ideas:
 * [macOS defaults list](https://macos-defaults.com) - Uncomplete list of macOS defaults commands with demos
 * [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles) - see his [.macos](https://github.com/mathiasbynens/dotfiles/blob/main/.macos) file for further inspiration
 * [Cameron Little's dotfiles](https://github.com/apexskier/dotfiles) - see his great idea for [managing changing defaults](https://github.com/apexskier/dotfiles/blob/main/macos/defaults/README.md)
@@ -13,7 +15,7 @@ They are highly inspired from the following pages
 # Find defaults on your own
 
 ## Search for it
-First you may search the internet resp. the Blogs / Github pages see above.
+First, you can search the Internet or the blogs / Github pages (see above).
 
 Searches for e.g. `defaults write finder list view` should bring up some results and you may find something like
 ```
