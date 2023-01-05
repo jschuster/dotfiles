@@ -1,4 +1,4 @@
-# My dotfiles and basic macOS shell setup
+# Joachim Schuster's dotfiles and basic macOS shell setup
 
 Basically i use [iTerm2](https://iterm2.com) as my terminal and [oh-my-zsh](http://ohmyz.sh) to manage the zsh settings.
 

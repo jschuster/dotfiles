@@ -1,4 +1,4 @@
-## My macOS defaults
+# Joachim Schuster's macOS defaults
 
 I provide here my own macOS defaults. 
 This makes it possible to perform all basic settings in one go, e.g. when reinstalling the system.
@@ -10,9 +10,9 @@ They are highly inspired from the following pages
 * [Cameron Little's dotfiles](https://github.com/apexskier/dotfiles) - see his great idea for [managing changing defaults](https://github.com/apexskier/dotfiles/blob/main/macos/defaults/README.md)
 
 
-## Find defaults on your own
+# Find defaults on your own
 
-### Search for it
+## Search for it
 First you may search the internet resp. the Blogs / Github pages see above.
 
 Searches for e.g. `defaults write finder list view` should bring up some results and you may find something like
@@ -21,7 +21,7 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 ```
 Or the macOS defaults list page https://macos-defaults.com/finder/fxpreferredviewstyle.html.
 
-### Extract it yourself
+## Extract it yourself
 When you dig a little deeper, you will find that the basic things are some `plist` files where the settings are stored.
 
 So e.g. `com.apple.finder` is just a file `com.apple.finder.plist` in `~/Library/Preferences`.
