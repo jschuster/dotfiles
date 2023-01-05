@@ -17,6 +17,24 @@ make install
 
 Continue with [Configure Zsh](#configure-zsh)  or use my managed zsh setup: [oh-my-zsh](../oh-my-zsh)
 
+### Dynamic Profiles
+
+One key feature of this setup ist the use of iTerm2's [Dynamic Profiles](https://iterm2.com/documentation-dynamic-profiles.html).
+
+The Installer will link the two files `Default.json` and `Profiles.json` in the `Dynamic Profiles` folder. So changes on that files will automatically be shared accross the Mac that share the setup.
+
+The Profiles contain the **font** ,**color sheme** and the custom **keys** setup.
+
+The Default.json contains the base Profile `Default Shared`.
+
+The other Profiles in `Profiles.json` inherite from that Profile and set a different background color.
+
+To update the `Default Shared` you can edit the settings but they would be overridden. You have to export that changes via iTerm2 `Profiles` preferences as a new Default.json. So this new json can be used as the new Default.json.
+
+Make sure that the `Guid` is the same as before.
+
+For changes on the other Profiles in `Profiles.json` you have to use an text editor.
+
 ##  Manual installation of iTerm2
 
 ###  Install iTerm2
