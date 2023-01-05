@@ -15,11 +15,9 @@ defaults write NSGlobalDomain AppleReduceDesktopTinting -bool true
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
 
-# Show filename extensions in Finder or e.g. Spotlight search
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
 # All applications use tabs instead of multiple windows
 defaults write NSGlobalDomain AppleWindowTabbingMode -string "always"
+# Possible values: `manual` = never, `fullscreen`, `always``
 
 # Restore application window on application restart
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool true
@@ -100,7 +98,7 @@ defaults write com.apple.dock scroll-to-open -bool true
 
 # Hide date in menu clock
 defaults write com.apple.menuextra.clock ShowDate -int 2
-# Possible values: 0 - `when enough space`, 1 - `Always` and 2 - `Never`
+# Possible values: `0` = when enough space, `1` = Always and `2` = Never
 
 # Set menu clocks date format
 defaults write com.apple.menuextra.clock DateFormat -string "EEE HH:mm"
@@ -113,6 +111,63 @@ defaults write com.apple.dock showhidden -bool true
 
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
+
+
+###############################################################################
+# Finder                                                                      #
+###############################################################################
+
+# Finder should opt-out of the global set AppleWindowTabbingMode 'always'. See in General UI/UX
+defaults write com.apple.finder AppleWindowTabbingMode -string "manual"
+
+# Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
+defaults write com.apple.finder QuitMenuItem -bool true
+
+# Set Desktop as the default location for new Finder windows
+# For Home folder, use `PfHm` and `file://${HOME}``
+# For Desktop folder, use `PfDe` and `file://${HOME}/Desktop/`
+# For other paths, use `PfLo` and `file:///full/path/here/`
+defaults write com.apple.finder NewWindowTarget -string "PfDe"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
+
+# Show icons for hard drives, servers, and removable media on the desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+
+# Finder: show all filename extensions (also in e.g. Spotlight search field)
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Finder: show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Finder: show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Display full POSIX path as Finder window title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+# Use list view in all Finder windows by default
+# Execute the following line once after you change this setting
+#  sudo find / -name ".DS_Store" -exec rm {} \;
+# Will delete all individual custom folder settings of ViewStyle 
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+# Possible values: `icnv` Icon (default), `clmv` Column, `glyv` Gallery, `Nlsv` List
+
+# When performing a search, search the current folder by default
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+# Possible values: `SCev` search this mac (default), `SCsp` previous scope, `SCcf` current folder
+
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Avoid creating .DS_Store files on network or USB volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 ###############################################################################
 # Kill affected applications                                                  #
