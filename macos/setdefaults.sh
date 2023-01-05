@@ -66,13 +66,18 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-# Move window by holding CMD + Control + drag
-defaults write NSGlobalDomain NSWindowShouldDragOnGesture -bool true
+# Trackpad: Right Click with two fingers tap
+defaults write NSGlobalDomain ContextMenuGesture -int 1
 
-# Move window by 3-finger drag. (Moving with 3 fingers in any window "chrome" moves the window.)
+# Trackpad: Move window by 3-finger drag. (Moving with 3 fingers in any window "chrome" moves the window.)
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
 
+# Move window by holding CMD + Control + drag
+defaults write NSGlobalDomain NSWindowShouldDragOnGesture -bool true
+
+# Disable back gesture
+defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool false
 
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
