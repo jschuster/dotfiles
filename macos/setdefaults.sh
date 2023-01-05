@@ -176,6 +176,8 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Safari version 16 and newer uses containered preferences instead of the former com.apple.Safari
 # A lot of former Keys still can be set but have no effect even in the new containered preferences
 
+# You may have to add Terminal resp. iTerm2 to the list of `Privacy > Full Disk Access` to be able to execute the following defaults
+
 # Safari should opt-out of the global set AppleWindowTabbingMode 'always'. See in General UI/UX
 defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari AppleWindowTabbingMode -string "manual"
 
