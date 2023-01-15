@@ -22,6 +22,9 @@ defaults write NSGlobalDomain AppleWindowTabbingMode -string "always"
 # Restore application window on application restart
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool true
 
+# Do not "Reopen windows when logging back in" (checkbox in restart confirmation dialog)
+defaults write com.apple.loginwindow TALLogoutSavesState -bool false
+
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
