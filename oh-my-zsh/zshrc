@@ -12,7 +12,7 @@ export HISTFILE=$HOME/.zsh_history
 setopt HIST_IGNORE_SPACE
 
 # Path to JAVA
-export JAVA_HOME=$(/usr/libexec/java_home -v11)
+export JAVA_HOME=$(/usr/libexec/java_home -v17)
 
 # Default command line editor (git and other tools use it)
 export EDITOR=nano
