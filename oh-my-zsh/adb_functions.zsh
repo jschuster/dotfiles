@@ -27,3 +27,18 @@ adbsetproxy() {
 adbunsetproxy() { eval adb shell settings put global http_proxy :0; }
 
 currentip() { ipconfig getifaddr "$(route get example.com | grep interface | awk '{print $2}')"; }
+
+# Simple login automation
+# sends a tab key event to focus the first input field and fills the username
+# sends a second tab key to focus the next input field and fills the password
+# confirms the form with a return key event after sleeping a secund 
+adblogin() {
+    username="${1}";
+    password="${2}";
+    eval adb shell input keyevent 61;
+    eval adb shell input text "$username";
+    eval adb shell input keyevent 61;
+    eval adb shell input text "$password";
+    sleep 1
+    eval adb shell input keyevent 66;
+}
